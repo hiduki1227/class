@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Orbitron:wght@500&family=Yomogi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+
+.headding {
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 100px;
+    text-align: center;
+}
+
+tr, td {
+    padding: 3px;
+    border: solid 2px black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+table {
+    margin: auto;
+    font-family: 'Yomogi', cursive;
+}
+
+.TimeTables {
+    text-align: center;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Yomogi', cursive;
+}
+
+
+@media screen and (min-width: 481px) {
+    .left > h1 {
+    font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .headding {
+        font-size: 50px;
+    }
+
+    tr, td {
+    font-size: 30px;
+    font-weight: bold;
+    }
+
+    .left {
+    float: none;
+    width: 100%;
+    }
+
+    .left > h1 {
+    font-size: 45px;
+    }
+}
