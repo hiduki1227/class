@@ -41,12 +41,18 @@ setInterval(() => {
         // 表を作る
         for (var i=0; i < 6; i++) { // 行を生成
             tr = document.createElement("tr");
+            tr2 = document.createElement("tr");
 
             for (var b=0; b < 2; b++) { // 列を生成
                 td = document.createElement("td");
+                td2 = document.createElement("td");
 
                 if (b === 1) {
                     td.innerText = TimeTableFile[i]; // 各科目をセルに代入
+
+                    td2.innerText = NextTimeTableFile[i]; // 各科目をセルに代入
+                    td2.style.width = "600px";
+                    
                     if (i === color) {
                         td.style.backgroundColor = "#2e2e2e";
                         td.style.color = "white";
@@ -56,38 +62,22 @@ setInterval(() => {
                 
                 else if (b === 0) {
                     td.innerText = i + 1;
+                    td2.innerText = i + 1;
+                    
                     if (i === color) {
                         td.style.backgroundColor = "#2e2e2e";
                         td.style.color = "white";
                     }
+                    
+                    td2.style.width = "30px";
                     td.style.width = "30px";
                 }
 
                 tr.appendChild(td);
+                tr2.appendChild(td2);
             }
             tbody.appendChild(tr);
             table.appendChild(tbody);
-        }
-
-        // 表を作る
-        for (var i = 0; i < 6; i++) { // 行を生成
-            tr2 = document.createElement("tr");
-
-            for (var b = 0; b < 2; b++) { // 列を生成
-                td2 = document.createElement("td");
-
-                if (b === 1) {
-                    td2.innerText = NextTimeTableFile[i]; // 各科目をセルに代入
-                    td2.style.width = "600px";
-                }
-
-                else if (b === 0) {
-                    td2.innerText = i + 1;
-                    td2.style.width = "30px";
-                }
-
-                tr2.appendChild(td2);
-            }
             tbody2.appendChild(tr2);
             table2.appendChild(tbody2);
         }

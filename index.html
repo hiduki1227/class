@@ -5,25 +5,44 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="loading.css">
     </head>
-    <body>
-        <header>
-            <h1 class="headding">時間割見れるやーつ</h1>
-            <div class="container">
-                <div class="TimeTables">
+
+    <body id="body">
+
+        <div id="loading-wrapper">
+            <div class="swapping-squares-spinner" :style="spinnerStyle">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <p>Now loading...</p>
+        </div>
+
+        <div id="page">
+            <header>
+                <h1 class="headding">時刻同期式時間割システム</h1>
+            </header>
     
-                    <div class="left">
-                        <h1>今日</h1>
-                        <table id="table"></table>
-                    </div>
-    
-                    <div class="left">
-                        <h1>明日</h1>
-                        <table id="table2"></table>
+            <main>
+                <div class="container">
+                    <div class="TimeTables">    
+                        <div class="left">
+                            <h1>Today</h1>
+                            <table id="table"></table>
+                        </div>
+        
+                        <div class="left">
+                            <h1>Tomorrow</h1>
+                            <table id="table2"></table>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
+    
+            </main>
+        </div>
         <script src="script.js"></script>
+        <script src="loading.js"></script>
     </body>
 </html>
