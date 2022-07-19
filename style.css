@@ -67,6 +67,27 @@ table {
     }
 
     .left > h1 {
-    font-size: 45px;
+    font-size: 35px;
     }
+}
+
+@media screen and (max-width: 300px) {
+    .headding {
+    font-size: 20px;
+}
+
+    tr, td {
+    font-size: 30px;
+    font-weight: bold;
+    }
+
+    .left {
+    float: none;
+    width: 100%;
+    }
+
+    .left > h1 {
+    font-size: 35px;
+    }
+
 }
